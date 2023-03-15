@@ -56,14 +56,14 @@ const processSearch = (dataLimit) =>{
 }
 
 // handle search button click
-document.getElementById('#btn-search').addEventListener('click', function(){
+document.getElementById('btn-search').addEventListener('click', function(){
     // start loader
     processSearch(10);
 })
 
 // search input field enter key handler
 document.getElementById('search-field').addEventListener('keypress', function (e) {
-    if (e.key === 'enter') {
+    if (e.key === 'enter' || e.key ===  'Enter') {
         processSearch(10);
     }
 });
@@ -105,4 +105,4 @@ const displayPhoneDetails = phone =>{
     `
 }
 
-loadPhones('apple');
+// loadPhones('apple');
